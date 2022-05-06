@@ -1,10 +1,11 @@
 package main
 
 import (
-	pb "github.com/gotest/proto/hello" // 引入proto包
+	"fmt"
 	"golang.org/x/net/context"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/grpclog"
+	pb "gotest/proto/hello" // 引入proto包
 )
 
 const (
@@ -31,5 +32,5 @@ func main() {
 		grpclog.Fatalln(err)
 	}
 
-	grpclog.Println(res.Message)
+	fmt.Println(res.Message)
 }

@@ -4,10 +4,10 @@ import (
 	"fmt"
 	"net"
 
-	pb "github.com/gotest/proto/hello" // 引入编译生成的包
 	"golang.org/x/net/context"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/grpclog"
+	pb "gotest/proto/hello" // 引入编译生成的包
 )
 
 const (
@@ -41,6 +41,6 @@ func main() {
 	// 注册HelloService
 	pb.RegisterHelloServer(s, HelloService)
 
-	grpclog.Println("Listen on " + Address)
+	fmt.Println("Listen on " + Address)
 	s.Serve(listen)
 }

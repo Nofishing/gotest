@@ -4,6 +4,8 @@ package hello;     // 指定默认包名
 // 指定golang包名
 option go_package = "hello/";
 
+//执行生成命令 protoc -I . --go_out=plugins=grpc:. ./hello/hello.proto 
+
 // 定义Hello服务
 service Hello {
   // 定义SayHello方法
